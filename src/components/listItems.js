@@ -12,25 +12,25 @@ import AssignmentIcon from '@material-ui/icons/Assignment';
 
 export const mainListItems = (
   <div>
-    <ListItem button>
+    <ListItem button onClick={console.log("Dashboard click")}>
       <ListItemIcon>
         <DashboardIcon />
       </ListItemIcon>
       <ListItemText primary="Dashboard" />
     </ListItem>
-    <ListItem button>
+    <ListItem button onClick={console.log("Account click")}>
       <ListItemIcon>
         <AccountCircle />
       </ListItemIcon>
       <ListItemText primary="Account" />
     </ListItem>
-    <ListItem button>
+    <ListItem button onClick={console.log("Subscriptions click")}>
       <ListItemIcon>
         <Subscriptions />
       </ListItemIcon>
       <ListItemText primary="Subscriptions" />
     </ListItem>
-    <ListItem button>
+    <ListItem button onClick={console.log("Explore click")}>
       <ListItemIcon>
         <Explore />
       </ListItemIcon>

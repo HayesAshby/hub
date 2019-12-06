@@ -192,11 +192,6 @@ export default function Dashboard() {
               inputProps={{ 'aria-label': 'search' }}
             />
           </div>
-          <IconButton color="inherit">
-            <Badge badgeContent={4} color="secondary">
-              <NotificationsIcon />
-            </Badge>
-          </IconButton>
         </Toolbar>
       </AppBar>
       <Drawer
