@@ -9,28 +9,29 @@ import Subscriptions from '@material-ui/icons/Subscriptions';
 import Explore from '@material-ui/icons/Explore';
 import LayersIcon from '@material-ui/icons/Layers';
 import AssignmentIcon from '@material-ui/icons/Assignment';
+import {navigate} from 'hookrouter';
 
 export const mainListItems = (
   <div>
-    <ListItem button onClick={console.log("Dashboard click")}>
+    <ListItem button onClick={() => navigate('/')}>
       <ListItemIcon>
         <DashboardIcon />
       </ListItemIcon>
       <ListItemText primary="Dashboard" />
     </ListItem>
-    <ListItem button onClick={console.log("Account click")}>
+    <ListItem button onClick={() => navigate('/account')}>
       <ListItemIcon>
         <AccountCircle />
       </ListItemIcon>
       <ListItemText primary="Account" />
     </ListItem>
-    <ListItem button onClick={console.log("Subscriptions click")}>
+    <ListItem button onClick={() => navigate('/subscriptions')}>
       <ListItemIcon>
         <Subscriptions />
       </ListItemIcon>
       <ListItemText primary="Subscriptions" />
     </ListItem>
-    <ListItem button onClick={console.log("Explore click")}>
+    <ListItem button onClick={() => navigate('/explore')}>
       <ListItemIcon>
         <Explore />
       </ListItemIcon>

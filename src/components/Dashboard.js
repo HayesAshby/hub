@@ -21,13 +21,20 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import SearchIcon from '@material-ui/icons/Search';
 import { mainListItems, secondaryListItems } from './listItems';
+import Video from './Video';
+import Channel from './Channel';
+import Account from './Account';
+
+const routes = {
+  '/account': () => <Account />,
+}
 
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
       <Link color="inherit" href="https://material-ui.com/">
-        Your Website
+        Hub
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -160,7 +167,6 @@ export default function Dashboard() {
   const handleDrawerClose = () => {
     setOpen(false);
   };
-  const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
 
   return (
     <div className={classes.root}>
@@ -211,6 +217,22 @@ export default function Dashboard() {
         <Divider />
         <List>{secondaryListItems}</List>
       </Drawer>
+      <main className={classes.content}>
+        <div className={classes.appBarSpacer} />
+        <Container maxWidth="lg" className={classes.container}>
+            {/* Video */}
+              <Paper>
+                <Video />
+              </Paper>
+            {/* Channel */}
+              <Paper>
+                <Channel />
+              </Paper>
+          <Box pt={4}>
+            <Copyright />
+          </Box>
+        </Container>
+      </main>
     </div>
   );
 }
