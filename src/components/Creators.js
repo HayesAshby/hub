@@ -18,7 +18,7 @@ export default function Channel() {
   const classes = useStyles();
   return (
     <React.Fragment>
-      <Title>Channels</Title>
+      <Title>Creators</Title>
       
     </React.Fragment>
   );

@@ -42,6 +42,6 @@ export const mainListItems = (
 
 export const secondaryListItems = (
   <div>
-    <ListSubheader inset>Secondary List</ListSubheader>
+    <ListSubheader inset>Subscriptions</ListSubheader>
   </div>
 );

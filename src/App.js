@@ -2,13 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './App.css';
 import { createMuiTheme } from '@material-ui/core/styles';
-import Dashboard from './components/Dashboard';
+import Home from './components/Home';
+
 
 function App() {
   return (
 
     <div className="App">
-      <Dashboard/>
+      <Home/>
     </div>
   );
 }

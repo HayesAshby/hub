@@ -22,11 +22,25 @@ import NotificationsIcon from '@material-ui/icons/Notifications';
 import SearchIcon from '@material-ui/icons/Search';
 import { mainListItems, secondaryListItems } from './listItems';
 import Video from './Video';
-import Channel from './Channel';
+import Creators from './Creators';
 import Account from './Account';
+import Signup from './Signup';
+import Signin from './Signin';
+import NotFound from './NotFound';
+import {useRoutes} from 'hookrouter';
 
 const routes = {
-  '/account': () => <Account />,
+    '/': () => <Home />,
+    //'/about': () => <AboutPage />,
+    //'/products': () => <Signup />,
+    '/account': () => <Signin />,
+    //'/products/:id': ({id}) => <ProductDetails id={id} />
+};
+	
+const MyApp = () => {
+    const routeResult = useRoutes(routes);
+    
+    return routeResult || <NotFound />;
 }
 
 function Copyright() {
@@ -158,7 +172,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function Dashboard() {
+export default function Home() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
   const handleDrawerOpen = () => {
@@ -220,13 +234,13 @@ export default function Dashboard() {
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}>
-            {/* Video */}
+            {/* Creators */}
+              <Paper>
+                <Creators />
+              </Paper>
+              {/* Video */}
               <Paper>
                 <Video />
-              </Paper>
-            {/* Channel */}
-              <Paper>
-                <Channel />
               </Paper>
           <Box pt={4}>
             <Copyright />
